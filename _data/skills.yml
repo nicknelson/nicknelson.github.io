@@ -1,0 +1,58 @@
+- name: Back-End
+  icon: terminal
+  skills:
+    - Python
+    - Django
+    - PostGreSQL
+    - Propietary languages
+    - AWS (EC2, RDS, Elastic Beanstalk, Elasticache)
+    - Docker
+  tools:
+    - Jupyter
+    - Datadog
+    - Sentry
+- name: Front-End
+  icon: code
+  skills:
+    - Vue.js
+    - Ember
+    - Javascript/jQuery
+    - HTML5/CSS
+    - LESS/SASS
+    - Bootstrap/Foundation
+  tools:
+    - Grunt
+    - Webpack
+    - Bootstrap
+    - Bugsnag
+- name: Skills
+  icon: hand-lizard-o
+  skills:
+    - OOP
+    - UI/UX
+    - Responsive Design
+    - Deployment Systems
+    - Automated Testing
+    - Learning new technologies
+    - Building APIs
+    - Hardware integration
+
+
+
+
+# <div class="col">
+#   Front-End /<br>
+#   Responsive/Dynamic /<br>
+#   HTML/<span data-options="LESS/SASS">CSS</span> /<br>
+#   Javascript/jQuery/Vue/Ember /<br>
+#   Bootstrap
+# </div>
+# <div class="col">
+#   Back-End /<br>
+#   Python/Propietary Systems
+# </div>
+# <div class="col">
+#   Full-Stack /<br>
+#   AWS / Deployment<br>
+#   UI/UX
+# </div>

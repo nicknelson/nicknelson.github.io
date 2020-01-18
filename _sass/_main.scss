@@ -1,0 +1,74 @@
+@import 'variables.scss';
+
+html, body {
+    background: $background-color;
+    color: $off-white;
+    font-size: 18px;
+}
+a {
+    color: $primary-color;
+    &:hover {
+        color: $secondary-color;
+    }
+
+}
+section {
+    padding: 1rem;
+}
+.nav-bar {
+    padding: 5px 10px;
+    background-color: darken($background-color, 5%);
+}
+.nav-brand {
+    color: $primary-color;
+    font-family: 'Montserrat', sans-serif;
+}
+.secondary-highlight {
+    color: $secondary-color;
+}
+.flex-wrap {
+    padding: 0 10px;
+    color: #fff;
+    height: calc(100vh + 53px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icons {
+    font-size: 2rem;
+    a {
+        padding: 10px;
+    }
+}
+section {
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        background-color: darken($background-color, 5%);
+        font-size: 2rem;
+        padding: 5px 10px;
+    }
+}
+.section-body {
+    padding: 1rem;
+    margin-bottom: 50px;
+    .title {
+        text-align: center;
+        font-size: 1.5rem;
+        color: $primary-color;
+        .icon {
+            color: $secondary-color;
+        }
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+            padding-bottom: 5px;
+        }
+    }
+    h3, h4, h5 {
+        color: $primary-color;
+    }
+}

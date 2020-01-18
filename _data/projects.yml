@@ -1,0 +1,70 @@
+- name: Everout
+  image: /
+  description: EverOut is an movie and event calendar site built with a Python/Django back-end and a Vue.js/Bootstrap front-end. Deployed on AWS architecture.
+  tech: Python, Django, Vue.js, PostGresQL, AWS, Bootstrap, SASS, Webpack, Datadog, Bugsnag, Sentry
+- name: Bold Type Tickets
+  image: /
+  description: Bold Type Tickets is a platform for buying and selling tickets, built with an ev/Gyrobase(?) back-end and a Bootstrap/jQuery front-end, with tools built with Ember.
+  tech: ev, Gyrobase, MySQL, jQuery, Bootstrap, Ember, LESS, Grunt, Bugsnag, Hardware integration with iOS apps and printers
+- name: AltPerks
+- name: The Stranger/Portland Mercury
+  image: /
+  description: The Stranger and Portland mercury are local news and event publications in Seattle and Portland, built with an ev/Gyrobase back-end.
+- name: Foundation
+  image: /
+  description: Through a partnership with DesertNet and The Stranger, I translated client designs to fully-styled themes for the Foundation platform.
+  tech: CSS, ev, Gyrobase
+- name: F5 Networks
+  tech: PHP, HTML/CSS
+- name: Freelance
+  tech: PHP, Wordpress
+
+
+#   I have worked in Web Support for large scale sites with F5 Networks, working to resolve and implement requests and issues related to its many internal and external sites. Managing requests from various parts of the company, I would resolve issues, create pages and mini-sites, updating pages with valid markup and applying new updated designs and styles that adhere to current web standards.
+
+# I also have experience with freelance web design, designing and building websites for Sesame Communications, as well as numerous other websites, both personal and professional.
+
+# I am skilled with HTML/CSS and knowledgeable of web standards. While higher development isn't my strong point, I can read and work well with JavaScript, PHP, and databases, and have worked with different content management, wiki and blogging systems, adjusting them to fit a site's needs.
+
+# THE STRANGER - Web Developer, Web Support Specialist
+# Translated client-provided mockups to fully functioning websites
+# Developed web apps for use by both large and small businesses, and internal use
+# Worked with a team creating and developing multiple web apps that integrate with different
+# hardware (iPods, DYMO and BOCA printers, etc.)
+# Worked with a team developing and maintaining multiple web sites in a custom template
+# language
+# Worked under tight deadlines while developing for multiple projects
+# www.thestranger.com | www.strangertickets.com | www.altperks.com |
+# www.publishwithfoundation.com
+
+# Sept &#39;07 –
+# July &#39;08
+
+# F5 NETWORKS - Web Developer
+# Worked with a team developing and maintaining large business website
+# Developed multiple internal tools for business and project management
+# Implemented coding standards and mark-up validation
+# Resolved web support tickets
+# www.f5networks.com
+
+# Nov &#39;07 –
+# Jan &#39;08
+
+# SEASAME COMMUNICATIONS - Web Developer, Designer
+# Designed and created websites and mockups for websites
+# Worked with lead designer on implementing designs for clients
+
+# May &#39;06 –
+# Present FREELANCE - Web Developer, Designer
+# Designed and developed multiple web sites and templates
+#  Boom Swagger Salon
+#  Synesthesia Garden
+#  Dre Poirer Sounds
+
+#  Elliott West Cafe (through F5)
+#  AKA: DUO (through AiS)
+#  Loucks &amp; Buren Orthodontics (through
+# Sesame)
+
+#  Soul Tree Recording
+#  Tri County Mech-Elect
