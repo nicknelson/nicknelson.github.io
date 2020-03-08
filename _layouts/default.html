@@ -1,76 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+    <script src="https://kit.fontawesome.com/9d6051a9fe.js" crossorigin="anonymous"></script>
+
     <title>Nick Nelson | Web Developer | Seattle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
   <body>
-    <nav class="container-fluid nav-bar">
+    <nav class="navbar">
       <div class="nav-brand">Nick Nelson | Web Developer</div>
     </nav>
-    <div class="container-fluid">
-      <section class="flex-wrap" id="splash">
-        <div class="container text-center">
-          <span class="secondary-highlight rotate">
-            <span>Welcome</span>
-            <span>Willkommen</span>
-            <span>ようこそ</span>
-            <span>Bienvenido</span>
-            <span>مرحابة</span>
-          </span>. I'm Nick Nelson, a <span data-options="Back-End/Front-End/Full-Stack">full-stack</span> Web Developer.
-          <div class="icons">
-            <a href="{{ site.data.info.github }}"><i class="fa fa-github"></i></a> 
-            <a href="{{ site.data.info.linkedin }}"><i class="fa fa-linkedin"></i></a></div>
+    <section class="flex-wrap" id="splash">
+      <div class="container has-text-centered">
+        <div class="secondary-highlight rotate display-4">
+          <span>Welcome</span>
+          <span style="display:none;">Willkommen</span>
+          <span style="display:none;">ようこそ</span>
+          <span style="display:none;">Bienvenido</span>
+          <span style="display:none;">مرحابة</span>
         </div>
-        <!-- GitHub, LinkedIn, Resume, Email -->
-      </section>
-    </div>
-    <div class="container">
-      <section id="about">
+        <div class="is-size-2">
+          I'm Nick Nelson, a <span data-options="Back-End/Front-End/Full-Stack">full-stack</span> Web Developer.<br>
+          15+ years experience. Seattle-based.
+        </div>
+        <div class="icons">
+          <a href="{{ site.data.info.github }}"><i class="fab fa-github"></i></a> 
+          <a href="{{ site.data.info.linkedin }}"><i class="fab fa-linkedin"></i></a></div>
+      </div>
+      <!-- GitHub, LinkedIn, Resume, Email -->
+    </section>
+    <section id="about">
+      <div class="container">
         <h2>What I Do</h2>
-        <div class="section-body row">
+        <div class="section-body columns">
           {% for group in site.data.skills %}
-            <div class="col">
+            <div class="column">
               <div class="title">
                 {% if group.icon %}
-                  <i class="icon fa fa-{{ group.icon }}"></i> {{ group.name }}
+                  <i class="icon fas fa-{{ group.icon }}"></i> {{ group.name }}
                 {% endif %}
               </div>
-              <ul>
+              <ul class="fa-ul">
                 {% for skill in group.skills %}
-                  <li>{{ skill }}</li>
+                  <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>{{ skill }}</li>
                 {% endfor %}
               </ul>
             </div>
           {% endfor %}
         </div>
-      </section>
-      <section id="projects">
-        <h2>What I've Done</h2>
-        <div class="section-body row">
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <h2>My Recent Work</h2>
+        <div class="section-body">
           {% for proj in site.data.projects %}
-            <div class="col">
-              <h5>{{ proj.name }}</h5>
+            {% assign mod = forloop.index | modulo: 3 %}
+            {% if mod == 1 %}
+              <div class="columns">
+            {% endif %}
+            <div class="column">
+              {% if proj.image %}
+                {% if proj.url %}<a href="{{ proj.url }}" target="_blank">{% endif %}
+                  <img src="{{ proj.image }}" alt="{{ proj.name }}" class="img-fluid">
+                {% if proj.url %}</a>{% endif %}
+              {% endif %}
+              <h4>
+                <a href="#" data-modal-toggle="Proj{{ forloop.index }}">{{ proj.name }}</a>
+              </h4>
+              <h5>{{ proj.tech-short }}</h5>
               <p>{{ proj.description }}</p>
+              <div class="modal" id="Proj{{ forloop.index }}">
+                <div class="modal-background" data-modal-toggle="Proj{{ forloop.index }}"></div>
+                <div class="modal-content">
+                  {{ proj.nam }}
+                  {{ proj.description }}
+                </div>
+                <button class="modal-close is-large" aria-label="close" data-modal-toggle="Proj{{ forloop.index }}"></button>
+              </div>
             </div>
+            {% if mod == 0 or forloop.last %}
+              </div>
+            {% endif %}
           {% endfor %}
+          </div>
         </div>
-      </section>
-      <section id="contact">
+    </section>
+    <section id="contact">
+      <div class="container">
         Contact me at <a href="mailto:{{ site.data.info.email }}">{{ site.data.info.email }}</a>
-      </section>
-      <footer id="site-foot">
+      </div>
+    </section>
+    <footer id="site-foot">
+      <div class="container">
         <!-- GitHub, LinkedIn, Insta, Email -->
-      </footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      </div>
+    </footer>
   </body>
 </html>

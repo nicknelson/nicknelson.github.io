@@ -1,23 +1,40 @@
 - name: Everout
-  image: /
-  description: EverOut is an movie and event calendar site built with a Python/Django back-end and a Vue.js/Bootstrap front-end. Deployed on AWS architecture.
+  image: /assets/images/projects/eo-home.png
+  summary: EverOut is an movie and event calendar site built with a Python/Django back-end and a Vue.js/Bootstrap front-end. Deployed on AWS architecture.
+  description: Developed a movie times and event calendar website. Built custom importers for events and movie times. Set up custom infrastructure with AWS. Built custom deployment tools.
   tech: Python, Django, Vue.js, PostGresQL, AWS, Bootstrap, SASS, Webpack, Datadog, Bugsnag, Sentry
+  tech-short: Django/Vue/Postgres/AWS
+  details: Movie Times Vue App, Event Calendar Django app, Webpack frontend; AWS architecture - Redis caching on Elasticache, PostGresQL database on RDS, Linux server on EC2 through EB, Lambda image handling, CloudFront asset caching; Sentry, Datadog for APM
+  url: https://everout.com
 - name: Bold Type Tickets
-  image: /
-  description: Bold Type Tickets is a platform for buying and selling tickets, built with an ev/Gyrobase(?) back-end and a Bootstrap/jQuery front-end, with tools built with Ember.
+  image: /assets/images/projects/btt-home.png
+  description: Developed and maintained a full-featured event ticketing e-commerce system from the ground up that allows clients to create and sell tickets to their events, and customers to search for and purchase tickets, from small local events to large festivals. Built an accounting system using Ember for managing payouts to clients. Developed APIs to connect third-party applications to the ticketing system. Integrated external hardware systems, such as BOCA and Dymo ticket printing, into the application. Built custom deployment tools.
   tech: ev, Gyrobase, MySQL, jQuery, Bootstrap, Ember, LESS, Grunt, Bugsnag, Hardware integration with iOS apps and printers
-- name: AltPerks
+  tech-short: ev/jQuery/MySQL/Ember
+  details: Ember accounting app, Ticket e-commerce app, ticket management admin app, custom web sites for ticket selling clients. 
+  url: https://boldtypetickets.com
 - name: The Stranger/Portland Mercury
-  image: /
-  description: The Stranger and Portland mercury are local news and event publications in Seattle and Portland, built with an ev/Gyrobase back-end.
+  image: /assets/images/projects/stranger-home.png
+  description: Developed features and maintained multiple large newspaper, event, and blogging websites for The Stranger, Portland Mercury, Index Media, and related brands. Integrated advertising through Google Ad Manager (formerly DFP). Built custom using the Gyrobase engine.
+  url: https://thestranger.com
+- name: AltPerks
+  image: /assets/images/projects/altperks-home.png
+  url: https://altperks.com
 - name: Foundation
-  image: /
   description: Through a partnership with DesertNet and The Stranger, I translated client designs to fully-styled themes for the Foundation platform.
   tech: CSS, ev, Gyrobase
+  tech-short: CSS/HTML
+  url: https://publishwithfoundation.com
 - name: F5 Networks
   tech: PHP, HTML/CSS
+  tech-short: PHP/HTML/CSS
+  description: Worked with a team maintaining and developing internal tools for a large business website. Implemented coding standards and mark-up validation.
+  url: https://f5.com
 - name: Freelance
-  tech: PHP, Wordpress
+  tech: PHP, Wordpress, CSS
+  tech-short: PHP/CSS/MySQL/Wordpress
+  description: Designed and developed multiple small business, content-based website with Wordpress and PHP.
+  details: Orthodontics, Boom Swagger Salon, Synesthesia Garden, Dre Poirier Sounds, Soul Tree Recording, Tri Country Mech-Elect, Elliott West Cafe, AKA
 
 
 #   I have worked in Web Support for large scale sites with F5 Networks, working to resolve and implement requests and issues related to its many internal and external sites. Managing requests from various parts of the company, I would resolve issues, create pages and mini-sites, updating pages with valid markup and applying new updated designs and styles that adhere to current web standards.

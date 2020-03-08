@@ -29,11 +29,17 @@
                         })
                     });
             });
+        },
+        toggleModal: function() {
+            $('#' + this.data('modalToggle')).toggleClass('is-active')
         }
     });
 })(jQuery);
 
  $(document).ready(function() {
-    console.log('doc read')
     $('.rotate').rotateText({fadeSpeed:500, pauseSpeed:1500});
+    $('[data-modal-toggle]').on('click', function() {
+        $(this).toggleModal()
+        return false
+    })
  });

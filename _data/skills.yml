@@ -1,9 +1,9 @@
 - name: Back-End
-  icon: terminal
+  icon: code-branch
   skills:
     - Python
     - Django
-    - PostGreSQL
+    - PostgreSQL
     - Propietary languages
     - AWS (EC2, RDS, Elastic Beanstalk, Elasticache)
     - Docker
@@ -12,7 +12,7 @@
     - Datadog
     - Sentry
 - name: Front-End
-  icon: code
+  icon: mobile-alt
   skills:
     - Vue.js
     - Ember
@@ -26,7 +26,7 @@
     - Bootstrap
     - Bugsnag
 - name: Skills
-  icon: hand-lizard-o
+  icon: hand-lizard
   skills:
     - OOP
     - UI/UX
