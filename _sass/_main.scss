@@ -1,7 +1,6 @@
 @import 'variables.scss';
 
 html, body {
-    // background: $background-color;
     background: linear-gradient(12deg, rgba(193, 193, 193,0.05) 0%, rgba(193, 193, 193,0.05) 2%,rgba(129, 129, 129,0.05) 2%, rgba(129, 129, 129,0.05) 27%,rgba(185, 185, 185,0.05) 27%, rgba(185, 185, 185,0.05) 66%,rgba(83, 83, 83,0.05) 66%, rgba(83, 83, 83,0.05) 100%),linear-gradient(321deg, rgba(240, 240, 240,0.05) 0%, rgba(240, 240, 240,0.05) 13%,rgba(231, 231, 231,0.05) 13%, rgba(231, 231, 231,0.05) 34%,rgba(139, 139, 139,0.05) 34%, rgba(139, 139, 139,0.05) 71%,rgba(112, 112, 112,0.05) 71%, rgba(112, 112, 112,0.05) 100%),linear-gradient(236deg, rgba(189, 189, 189,0.05) 0%, rgba(189, 189, 189,0.05) 47%,rgba(138, 138, 138,0.05) 47%, rgba(138, 138, 138,0.05) 58%,rgba(108, 108, 108,0.05) 58%, rgba(108, 108, 108,0.05) 85%,rgba(143, 143, 143,0.05) 85%, rgba(143, 143, 143,0.05) 100%),linear-gradient(96deg, rgba(53, 53, 53,0.05) 0%, rgba(53, 53, 53,0.05) 53%,rgba(44, 44, 44,0.05) 53%, rgba(44, 44, 44,0.05) 82%,rgba(77, 77, 77,0.05) 82%, rgba(77, 77, 77,0.05) 98%,rgba(8, 8, 8,0.05) 98%, rgba(8, 8, 8,0.05) 100%),linear-gradient(334deg, hsl(247,0%,2%),hsl(247,0%,2%));
     color: $off-white;
     font-size: 18px;
@@ -54,8 +53,7 @@ section {
 .section-body {
     padding: 1rem;
     margin-bottom: 50px;
-    .title {
-        text-align: center;
+    h4, .title {
         font-size: 1.5rem;
         color: $primary-color;
         .icon {
@@ -70,10 +68,31 @@ section {
             }
         }
     }
-    h3, h4 {
-        color: $primary-color;
-    }
     h5 {
         color: $secondary-color;
     }
+}
+.modal {
+    .modal-content {
+        background-color: $background-color;
+        padding: 20px;
+        @media screen and (min-width: 769px), print {
+            width: 80%;
+        }
+    }
+    .title {
+        font-size: 2rem;
+        font-weight: normal;
+        margin: 0;
+    }
+    hr {
+        background-color: darken($background-color, 5%);
+        margin: 1rem 0 1rem 0;
+    }
+    strong {
+        color: $secondary-color;
+    }
+}
+.footnote {
+    font-size: .7rem;
 }

@@ -17,24 +17,22 @@
     <nav class="navbar">
       <div class="nav-brand">Nick Nelson | Web Developer</div>
     </nav>
-    <section class="flex-wrap" id="splash">
-      <div class="container has-text-centered">
-        <div class="secondary-highlight rotate display-4">
-          <span>Welcome</span>
-          <span style="display:none;">Willkommen</span>
-          <span style="display:none;">ようこそ</span>
-          <span style="display:none;">Bienvenido</span>
-          <span style="display:none;">مرحابة</span>
-        </div>
-        <div class="is-size-2">
-          I'm Nick Nelson, a <span data-options="Back-End/Front-End/Full-Stack">full-stack</span> Web Developer.<br>
-          15+ years experience. Seattle-based.
-        </div>
-        <div class="icons">
-          <a href="{{ site.data.info.github }}"><i class="fab fa-github"></i></a> 
-          <a href="{{ site.data.info.linkedin }}"><i class="fab fa-linkedin"></i></a></div>
+    <section class="flex-wrap has-text-centered" id="splash">
+      <div class="secondary-highlight rotate is-size-2">
+        <span>Welcome</span>
+        <span style="display:none;">Willkommen</span>
+        <span style="display:none;">ようこそ</span>
+        <span style="display:none;">Bienvenido</span>
+        <span style="display:none;">مرحابة</span>
       </div>
-      <!-- GitHub, LinkedIn, Resume, Email -->
+      <div class="is-size-4">
+        I'm Nick Nelson, a <span data-options="Back-End/Front-End/Full-Stack">full-stack</span> Web Developer.<br>
+        15+ years experience. Seattle-based.
+      </div>
+      <div class="icons">
+        <a href="{{ site.data.info.github }}"><i class="fab fa-github"></i></a> 
+        <a href="{{ site.data.info.linkedin }}"><i class="fab fa-linkedin"></i></a>
+      </div>
     </section>
     <section id="about">
       <div class="container">
@@ -42,7 +40,7 @@
         <div class="section-body columns">
           {% for group in site.data.skills %}
             <div class="column">
-              <div class="title">
+              <div class="title has-text-centered">
                 {% if group.icon %}
                   <i class="icon fas fa-{{ group.icon }}"></i> {{ group.name }}
                 {% endif %}
@@ -68,7 +66,7 @@
             {% endif %}
             <div class="column">
               {% if proj.image %}
-                {% if proj.url %}<a href="{{ proj.url }}" target="_blank">{% endif %}
+                {% if proj.url %}<a data-modal-toggle="Proj{{ forloop.index }}" target="_blank">{% endif %}
                   <img src="{{ proj.image }}" alt="{{ proj.name }}" class="img-fluid">
                 {% if proj.url %}</a>{% endif %}
               {% endif %}
@@ -76,12 +74,30 @@
                 <a href="#" data-modal-toggle="Proj{{ forloop.index }}">{{ proj.name }}</a>
               </h4>
               <h5>{{ proj.tech-short }}</h5>
-              <p>{{ proj.description }}</p>
+              <p>{{ proj.summary }}</p>
               <div class="modal" id="Proj{{ forloop.index }}">
                 <div class="modal-background" data-modal-toggle="Proj{{ forloop.index }}"></div>
                 <div class="modal-content">
-                  {{ proj.nam }}
-                  {{ proj.description }}
+                  <h4 class="title">{{ proj.name }}</h4>
+                  <h5>{{ proj.tech-short }}</h5>
+                  <hr>
+                  <div class="columns">
+                    <figure class="column image">
+                      <img src="{{ proj.image }}">
+                      {% if proj.url %}
+                          <p><a href="{{ proj.url }}">{{ proj.url }}</a></p>
+                      {% endif %}
+                    </figure>
+                    <div class="column is-two-thirds">
+                      <div class="content">
+                        <p>{{ proj.description }}</p>
+                        <p>{{ proj.tech }}</p>
+                        {% if proj.ev-footnote %}
+                          <p><small class="footnote">*ev is a purpose-built programming language developed for the Gyrobase engine by DesertNet</small></p>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <button class="modal-close is-large" aria-label="close" data-modal-toggle="Proj{{ forloop.index }}"></button>
               </div>
@@ -93,10 +109,10 @@
           </div>
         </div>
     </section>
-    <section id="contact">
-      <div class="container">
+    <section id="contact" class="flex-wrap has-text-centered">
+      <span class="is-size-3">
         Contact me at <a href="mailto:{{ site.data.info.email }}">{{ site.data.info.email }}</a>
-      </div>
+      </span>
     </section>
     <footer id="site-foot">
       <div class="container">
