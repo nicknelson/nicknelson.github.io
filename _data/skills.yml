@@ -3,8 +3,8 @@
   skills:
     - Python
     - Django
-    - PostgreSQL
-    - Propietary languages
+    - PostgreSQL/MySQL
+    - ev/Gyrobase
     - AWS (EC2, RDS, Elastic Beanstalk, Elasticache)
     - Docker
   tools:
@@ -30,12 +30,13 @@
   skills:
     - OOP
     - UI/UX
-    - Responsive Design
-    - Deployment Systems
-    - Automated Testing
-    - Learning new technologies
-    - Building APIs
+    - Schema design
+    - Responsive design
+    - Deployment systems
+    - Automated testing
+    - API design
     - Hardware integration
+    - Query optimization
 
 
 
